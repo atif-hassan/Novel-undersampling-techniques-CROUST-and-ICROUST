@@ -1,0 +1,29 @@
+Copy CROUST and/or iCROUST files to you directory.
+
+How to import:
+  from CROUST import croust
+  from iCROUST import icroust
+
+How to use:
+  CROUST:
+    function = croust(X, Y, points_to_remove, num_clusters=10000, maj_class=0, min_class=1)
+  Usage:
+    data, target_variable = croust(data, target_variable, points_to_remove)
+    points_to_remove are the number of samples you want to remove of the majority class
+    num_clusters is the number of clusters you want to define for the data. Larger samples will usually require larger clusters. Experiment with this variable to get best results
+    maj_class is the class value for the majority class
+    min_class is the class value for the minority class
+    
+  iCROUST:
+    function = icroust(X, Y, points_to_remove, n_neighbours, points_to_remove_at_a_time=4, num_clusters=10000, maj_class=0, min_class=1):
+  Usage:
+    data, target_variable = icroust(data, target_variable, points_to_remove, n_neighbours)
+    points_to_remove are the number of samples you want to remove of the majority class
+    n_neighbours are the number of neighbouring samples you want to consider
+    points_to_remove_at_a_time are the number of samples you want to delete in a single iCROUST iteration. Works like a batch_size variable. Reduce this value for better accuracy at the cost of speed
+    num_clusters is the number of clusters you want to define for the data. Larger samples will usually require larger clusters. Experiment with this variable to get best results
+    maj_class is the class value for the majority class
+    min_class is the class value for the minority class
+    
+The paper explaining the algorithm will be uploaded once it is published at ICDM (Industrial Conference on Data Mining)
+  
