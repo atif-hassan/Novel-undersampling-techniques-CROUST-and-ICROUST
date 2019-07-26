@@ -23,7 +23,7 @@ import math
 from sklearn.cluster import KMeans, MiniBatchKMeans
 from sklearn.neighbors import NearestNeighbors
 
-def icroust(X, Y, points_to_remove, n_neighbours, points_to_remove_at_a_time, num_clusters=10000, maj_class=0, min_class=1):
+def icroust(X, Y, points_to_remove, n_neighbours, points_to_remove_at_a_time=4, num_clusters=10000, maj_class=0, min_class=1):
     X_minority = X[np.where(Y==min_class)[0]]
     X_majority = X[np.where(Y==maj_class)[0]]
     indices = list()
